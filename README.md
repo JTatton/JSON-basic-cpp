@@ -16,17 +16,27 @@ I just want a simple way to get information from a JSON file to use in other pro
 ## JSON BNF Grammar
 
 object      ::=     '{' '}' | '{' members '}'
+
 members     ::=     pair | pair ',' members
+
 pair        ::=     string ':' value
+
 array       ::=     '[' ']' | '[' elements ']'
+
 elements    ::=     value | value ',' elements
+
 value       ::=     string | number | object | array | 'true' | 'false' | 'null'
 
 string      ::=     '"' '"' | '"' chars '"'
+
 chars       ::=     char | char chars
+
 char        ::=     *Any Unicode Character except* '"' *or* '\' | '\"' | '\\' | '\/' | '\b' | '\f' | '\n' | '\r' | '\t' | '\u' *four hex digits*
+
 number      ::= ['-'] ('0' | digit19) digit* ['.' digit digit*] [('e'|'E') ['+'|'-'] digit digit*]
+
 digit       ::=     '0'-'9'
+
 digit19     ::=     '1'-'9'
 
 * '[]' indicate may not appear, or appear once
