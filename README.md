@@ -25,4 +25,9 @@ value       ::=     string | number | object | array | 'true' | 'false' | 'null'
 string      ::=     '"' '"' | '"' chars '"'
 chars       ::=     char | char chars
 char        ::=     *Any Unicode Character except* '"' *or* '\' | '\"' | '\\' | '\/' | '\b' | '\f' | '\n' | '\r' | '\t' | '\u' *four hex digits*
-number      ::= ['-'] ('0' | digit19) digit* ['.' digit digit*] [('e'|'E') ['+'|'-'] digit digit*] 
+number      ::= ['-'] ('0' | digit19) digit* ['.' digit digit*] [('e'|'E') ['+'|'-'] digit digit*]
+digit       ::=     '0'-'9'
+digit19     ::=     '1'-'9'
+
+* '[]' indicate may not appear, or appear once
+* '*' indicates preceding component may appear 0 or more times
