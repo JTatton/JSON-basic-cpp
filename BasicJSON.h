@@ -21,7 +21,8 @@ public:
                                           // may change
 
   std::string getFileContents();          // returns the string containing file
-                                          // contents
+                                          // contents. Mainly to be used for
+                                          // testing
 
 private:
   std::string fileNameLoc;                // stores directory/name of file
@@ -30,6 +31,11 @@ private:
   void readFile();                        // reads from file at fileNameLoc
                                           // into string fileContents also 
                                           // removes spaces
+
+  std::string readBetweenQuotes(unsigned int* position);
+
+  unsigned int positionInFile;
+  unsigned int* posPtr;
   
 };
 

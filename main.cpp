@@ -3,9 +3,11 @@
 
 int main()
 {
-  BasicJSON bjson("test.json");
+  BasicJSON bjson("traintest.json");
 
-  std::cout << bjson.getFileContents() << std::endl;
+  //std::cout << bjson.getFileContents() << std::endl;
+
+  std::cout << bjson.getValue("DestinationAimedArrivalTimeSpecified") << std::endl;
 
   return 0;
 }
