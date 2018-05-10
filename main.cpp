@@ -1,20 +1,11 @@
-#include "readFile.h"
+#include "BasicJSON.h"
 #include <iostream>
-
-using namespace std;
 
 int main()
 {
-	ReadFile newFile;
+  BasicJSON bjson("test.json");
 
-	newFile.inputFile();
+  std::cout << bjson.getFileContents() << std::endl;
 
-	for(int i = 0; i<200; i++)
-	{
-		cout << newFile.nextChar();
-	}
-
-	cout << endl;
-
-	return 0;
+  return 0;
 }
